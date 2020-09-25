@@ -1,0 +1,3 @@
+
+
+You are the watchmaster in the crownsguard of the town of Harborger. There have been a set of murders in the town, and you have 10 suspects. In order to find the killer, you can choose each round a suspect to hang on the market place. if this suspect isnt the killer, you go to the next round. If the suspect hover turns out to be the killer, you win. you lose when all other suspects are dead, and you are left alone with the killer.

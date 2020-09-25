@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mygame</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		alert("welcome to algaros! In this land ofmagic and fantasy, there is the city of Vesperion. You, my friend, are a traveller trying to get in this city, to find gold and tressure. Click OK to start the game")
+
+	 	function start() {
+	 		var startAwns = prompt("you stand before the gates of the city, without any identification. you have to go in via illigal ways. you see only 3 options. \n 1 - sneak your way in \n 2 - smooth talk the guard \n 3 - fight the guards")
+	 		if (startAwns == 1) {sneak()}
+	 		else if (startAwns == 2) {charisma()}
+	 		else {
+	 			alert("you start blasting fire balls and eldridge blasts to the guards, but seriously, what did you think was gonna happen. the legion of 800 guards all attack you and befor long you are out of energy. after you killed 278 guards, the remaining take you to thier prison, where they chop of your nipples, rip out all 20 of your nails and then cut you 278 times. after that, they finally kill you by drowning you in a toilet. you die.")
+	 		}
+	 	}
+
+		function sneak() {
+			var sneakAwns = prompt("as you clim over the tower of the city walls, you succefully reach the town plaza. you have two options \n 1 - go to the tavern \n 2 - go to the whorehouse")
+			if (sneakAwns == 1) {tavern()}
+			else {whorehouse()}
+		}
+
+		function charisma(){
+			var charismaAwns = prompt("you try to smoothtalk to the guard. it works and without any difficulty you get in to the city. you have two options \n 1 - go to the tavern \n 2 - go to the whorehouse")
+			if (charismaAwns == 1) {tavern()}
+			else {whorehouse()}
+		}
+
+		function tavern(){
+			var tavernAwns = prompt("you arrive in the tavern and you have 2 options \n 1 - look for a quest \n 2 - get a drink")
+			if (tavernAwns == 1) {quest()}
+			else {barfight()}
+		}
+
+		function quest(){
+			var questAwns = prompt("You find a quest that gives you 100 gold if you can kill the undead in a mansion nearby. you find this mansion, and you attack the undead. you have 2 options \n 1 - use magic \n 2 - use swords")
+			if (questAwns == 1) {undeaddeath()}
+			else {necromancer()}
+		}
+
+		function necromancer(){
+			var bossbattle = prompt("you get into the mansion, and before you stands a hooded man. the necromancer. your clash begins. you have 2 options \n 1 - attack with silver arrows \n 2 - attack with sun magic")
+			if (bossbattle == 1) {undeaddeath()}
+				else{
+					alert("your sun magic BLASTS into the necromancers chest. he fires a GIANT black flame towards you, but you roll out of the way. You cast another blast and all of the undead beasts and men die. the windows CRACK open and the necromancer starts burning in the sun, revealing his vampire form. he dies and you take his burned head to the tavern, claiming your 100 gold reward. with your new buyed horse, you ride in to the horizon.")
+					alert("GOOD ENDING")
+				}
+		}
+
+		function undeaddeath() {
+			alert("as the undead horde grabs your limbs, tearing them appart, you die, being eaten alive by the necromanced skelletons and zombies.")
+		}
+
+		function barfight() {
+			var barfightAwns = prompt("you get a drink. then another. before you know it you are in a barfight. you have 2 options \n 1 - fight back \n 2 - do not fight back and wait for the guards")
+			if (barfightAwns == 1) { guarddeath()}
+			else {
+				alert("the guards see you doing nothing and take you to prison.")
+				prison()
+			}
+		}
+
+		function prison() {
+			var prisonAwns = prompt("you are thrown into the towns prison. you have 2 options \n 1 - behave \n 2 - escape")
+			if (prisonAwns == 1) {
+				alert("you behave yourself and in 2 days the warden invites you too his office")
+				warden()
+			}
+			else {guarddeath()}
+		}
+
+		function guarddeath(){
+			alert("the gaurds come by and kill you on the spot with a musket.")
+		}
+
+		function warden(){
+			var wardenAwns = prompt("you sit down with the warden in his office. you have 2 options \n 1 - ask for release \n 2 - kill the warden")
+			if (wardenAwns == 1) {
+				alert("you ask for freedom, and the warden sets you free. you are back in the city, and you head to the tavern")
+				tavern()
+			}
+			else {
+				alert("you smash your cup on the table and stick the sharp shard in the wardens neck. the corrupt guards see you across the dead warden, and declare you the new warden.")
+				alert("GOOD ENDING")
+			}
+		}
+
+		function whorehouse(){
+			var whoreAwns = prompt("you enter the whorehouse, and you are able to buy a 'lady' for the night. you have 2 options \n 1 - fuck a whore \n 2 - head back to the tavern")
+			if (whoreAwns == 1) { whine()}
+			else {
+				alert("you look at your rather small sized penus, and you head back to the tavern")
+				tavern()
+				}
+			}
+
+			function whine() {
+				var whineAwns = prompt("after you 'slept' with the hooker, she offers you whine. you have 2 options \n 1 - take the whine \n 2 - refuse the wine and walk outside")
+				if (whineAwns == 1) {
+					alert("as the cup reaches your lips, you instantly die by the asid.")
+				}
+				else {outside()}
+			}
+
+			function outside() {
+				var outsideAwns = prompt("You walk around the town. you have 3 options. \n 1 - head to the towns tavern \n 2 - Try a bank heist \n 3 - walk to the church")
+				if (outsideAwns == 1) {
+					alert("you head back to the tavern")
+					tavern()
+				}
+				else if (outsideAwns == 2) {heist()}
+				else {church()}
+			}
+
+			function heist() {
+				var heistAwns = prompt("you choose to rob a bank. you have two options \n 1 - sneak in and get the money \n 2 - openly rob the bank")
+				if (heistAwns == 1) {
+					alert("you sneak in, break some necks, grab a bag of cash, and flee the city.")
+					alert("GOOD ENDING. . . ?")
+				}
+			}
+
+			function church(){
+				var churchAwns = prompt("as you pray in the church, a spirit appears. he claimes to be the town spirit, and he attacks you with his magic. you have 4 options \n 1 - attack the spirit with a bow \n 2 - attack the spirit with a bow \n 3 - attack the spirit with blood magic \n 4 - run the hell out of here")
+				if (churchAwns !== 3) {
+					alert("before you can even do something the mighty spirit attaks you by flying into you. your whole body explodes, painting the church with your organs. you are dead.")
+				}
+				else {
+					alert("You utter some arcane speach, as the mighty spirit flies into you. as soon as he touches you he starts screaming in pain, twisting and morphing, for the thorns spell you cast on youself reflected his attack back at him. he transforms into a white orb, which you instantly sell at a pawnshop for 300 gold.")
+					alert("GOOD ENDING")
+				}
+			}
+
+
+			start()
+	</script>
+</body>
+</html>
