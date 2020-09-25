@@ -5,6 +5,7 @@
 </head>
 <body>
 	<script type="text/javascript">
+		var deathcount = 0;
 
 		alert("welcome to algaros! In this land ofmagic and fantasy, there is the city of Vesperion. You, my friend, are a traveller trying to get in this city, to find gold and tressure. Click OK to start the game");
 
@@ -14,8 +15,23 @@
 	 		else if (startAwns == 2) {charisma()}
 	 		else {
 	 			alert("you start blasting fire balls and eldridge blasts to the guards, but seriously, what did you think was gonna happen. the legion of 800 guards all attack you and befor long you are out of energy. after you killed 278 guards, the remaining take you to thier prison, where they chop of your nipples, rip out all 20 of your nails and then cut you 278 times. after that, they finally kill you by drowning you in a toilet. you die.")
+	 			respawn()
 	 		}
 	 	}
+
+	 	function respawn() {
+	 		console.log("hoi");
+	 		
+	 		deathcount = deathcount +  1;
+	 			var respawnAwns = prompt("would you like to respawn? \n 1 - yes \n 2 - no");
+	 			if (respawnAwns == 1 && deathcount < 2) {
+	 				alert("respawning");
+	 				start();
+	 			}
+	 			else {
+	 				alert("your deathcount is over 10 or you have given up. you die permanently....");
+	 			}
+	 		}
 
 		function sneak() {
 			var sneakAwns = prompt("as you clim over the tower of the city walls, you succefully reach the town plaza. you have two options \n 1 - go to the tavern \n 2 - go to the whorehouse")
@@ -52,6 +68,7 @@
 
 		function undeaddeath() {
 			alert("as the undead horde grabs your limbs, tearing them appart, you die, being eaten alive by the necromanced skelletons and zombies.")
+			respawn()
 		}
 
 		function barfight() {
@@ -74,6 +91,7 @@
 
 		function guarddeath(){
 			alert("the gaurds come by and kill you on the spot with a musket.")
+			respawn()
 		}
 
 		function warden(){
@@ -101,6 +119,7 @@
 				var whineAwns = prompt("after you 'slept' with the hooker, she offers you whine. you have 2 options \n 1 - take the whine \n 2 - refuse the wine and walk outside")
 				if (whineAwns == 1) {
 					alert("as the cup reaches your lips, you instantly die by the asid.")
+					respawn()
 				}
 				else {outside()}
 			}
@@ -121,12 +140,17 @@
 					alert("you sneak in, break some necks, grab a bag of cash, and flee the city.")
 					alert("GOOD ENDING. . . ?")
 				}
+				else {
+					guarddeath()
+					respawn()
+				}
 			}
 
 			function church(){
 				var churchAwns = prompt("as you pray in the church, a spirit appears. he claimes to be the town spirit, and he attacks you with his magic. you have 4 options \n 1 - attack the spirit with a bow \n 2 - attack the spirit with a bow \n 3 - attack the spirit with blood magic \n 4 - run the hell out of here")
 				if (churchAwns !== 3) {
 					alert("before you can even do something the mighty spirit attaks you by flying into you. your whole body explodes, painting the church with your organs. you are dead.")
+					respawn()
 				}
 				else {
 					alert("You utter some arcane speach, as the mighty spirit flies into you. as soon as he touches you he starts screaming in pain, twisting and morphing, for the thorns spell you cast on youself reflected his attack back at him. he transforms into a white orb, which you instantly sell at a pawnshop for 300 gold.")
